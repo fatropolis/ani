@@ -1,0 +1,842 @@
+/* width */
+::-webkit-scrollbar {
+	width: 0;
+	transition-duration: .3s;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: linear-gradient(to bottom, hsla(0,0%,90%,0.7)20%, transparent);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: hsla(0,0%,30%,1.00);
+	border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: hsla(0,0%,40%,1.00);
+}
+
+
+
+:root {
+  --nav-Center-X: calc(100%-115px);
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-ExtraLight.ttf");
+	font-weight: 300;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-Light.ttf");
+	font-weight: 400;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-Regular.ttf");
+	font-weight: 500;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-SemiBold.ttf");
+	font-weight: 600;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-Bold.ttf");
+	font-weight: 700;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-ExtraBold.ttf");
+	font-weight: 800;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-Black.ttf");
+	font-weight: 900;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-ExtraLightItalic.ttf");
+	font-weight: 300;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-LightItalic.ttf");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-Italic.ttf");
+	font-weight: 500;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-SemiBoldItalic.ttf");
+	font-weight: 600;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-BoldItalic.ttf");
+	font-weight: 700;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-ExtraBoldItalic.ttf");
+	font-weight: 800;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: Nunito;
+	src: url("../fonts/Nunito/Nunito-BlackItalic.ttf");
+	font-weight: 900;
+	font-style: italic;
+	font-display: swap;
+}
+
+
+* {
+	user-select: none;
+	font-family: Nunito;
+	color: hsla(0,0%,45%,1.00);
+}
+
+
+
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+#body {
+	width: 100%;
+	background: white;
+}
+
+nav {
+	display: block;
+	position: fixed;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	text-shadow: .5px .5px 1px hsla(0,0%,100%,1);
+	pointer-events: none;
+	z-index: 100;
+}
+.nav-Logo {
+	left: 30px;
+	top: 30px!important;
+	font-size: 32px;
+}
+#nav-Logo-2 {
+	color: white;
+	text-shadow: 0 1px 3px black;
+}
+#container-Hamburger {
+	right: 30px;
+	top: 30px;
+}
+#hamburger {
+	width: 25px;
+	height: 15px;
+	display: flex;
+	flex-direction: column;
+    transition-duration: .3s;
+	pointer-events: auto;
+}
+/*
+#hamburger:hover:not(.hamburger-Active) {
+	transform: rotate(10deg);
+}
+#hamburger:hover:not(.hamburger-Active) > #hamburger-1, #hamburger:hover:not(.hamburger-Active) > #hamburger-3 {
+	transform: rotate(-10deg);
+}
+*/
+.hamburger-Active {
+	transform: rotate(45deg);
+}
+.hamburger-Active > #hamburger-1, .hamburger-Active > #hamburger-3 {
+	transform: rotate(-90deg);
+}
+#hamburger div {
+	background: hsla(0,0%,40%,1.00);
+	height: 20%;
+	margin: auto;
+    border-radius: 10px;
+}
+#hamburger-1, #hamburger-3 {
+	width: 15px;
+    transition-duration: inherit;
+}
+#hamburger-2 {
+	width: 25px;
+}
+.navHide {
+    clip-path: circle(0% at calc(100% - 45px) 30px)!important;
+}
+.navHiden {
+	pointer-events: auto!important;
+}
+#nav-Inner {
+	width: 100%;
+	height: 100%;
+/*	filter: drop-shadow(0 0 3px hsla(0,0%,0%,0.3));*/
+}
+#nav-Inner-Bg {
+	width: 100%;
+	height: 100%;
+	background: white;
+    clip-path: circle(140% at calc(100% - 45px));
+	transition: clip-path .3s;
+}
+#nav-Container-Link {
+	flex-direction: column;
+	text-align: center;
+}
+.nav-Link, .nav-Link-Active {
+	padding: 30px 20px;
+	font-size: 18px;
+	font-weight: 900;
+	cursor: pointer;
+	transition-duration: .2s;
+}
+.nav-Link-Active {
+	color: hsla(0,0%,60%,1);
+	text-shadow: 1px 1px 0px hsla(0,0%,40%,1.00), -1px -1px 0 hsla(0,0%,40%,1.00), 1px -1px 0 hsla(0,0%,40%,1.00), -1px 1px 0 hsla(0,0%,40%,1.00);
+}
+.nav-Link:hover {
+	color: hsla(0,0%,60%,1);
+}
+.dDShow, #nav-DropDown:hover {
+    clip-path: inset(0 0 0% 0)!important;
+}
+#nav-DropDown {
+	top: 70px;
+	width: 450px;
+	min-height: 100px;
+	padding: 10px;
+	background: white;
+	border-radius: 0 0 10px 10px;
+	box-shadow: 0 0 3px hsla(0,0%,0%,0.3);
+    clip-path: inset(0 0 100% 0);
+	transition: clip-path .3s;
+}
+
+
+#Container {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+/*	background: white;*/
+	width: 100%;
+	height: 100%;
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: hsla(0,0%,40%,1.00);
+	overflow: hidden overlay;
+}
+#cover-Container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: white;
+}
+prefooter {
+	display: block;
+	width: 100%;
+	height: 30px;
+	padding-bottom: 300px;
+	overflow: hidden;
+}
+prefootershadow {
+	display: block;
+	position: relative;
+	top: -15px;
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(0px 3px 6px hsla(0,0%,0%,0.4));
+}
+clip {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background: hsla(0,0%,100%,1.00);
+	clip-path: polygon(0 0, 100% 0, 100% 50%, 70% 50%, 50% 100%, 30% 50%, 0 50%);
+}
+footer{
+	display: block;
+	position: fixed;
+	bottom: 0px;
+	width: 100%;
+	height: 350px;
+	background: hsla(0,0%,80%,1.00);
+	z-index: -10;
+}
+#footer-About-Top {
+	height: calc(70% - 11px);
+	border-top: 10px solid hsla(0,0%,40%,1.00);
+	background: hsla(0,0%,25%,1.00);
+}
+#footer-About-Bottom {
+	height: 28%;
+	background: hsla(0,0%,20%,1.00);
+}
+#footer-Base {
+	height: 2%;
+	background: hsla(0,0%,40%,1.00);
+}
+#pbb, #copyright {
+	color: white;
+	position: absolute;
+	font-size: 12px;
+}
+#pbb {
+	left: 100px;
+}
+#EsuonWorks {
+	color: hsla(0,0%,80%,1.00);
+	bottom: -15px;
+	font-family: 'Bauhaus 93';
+	font-size: 60px;
+}
+#copyright {
+	right: 100px;
+}
+
+
+
+.ace--test {
+	width:65px;
+	height: 65px;
+	border: 1px solid black;
+}
+.ace--width-100 {
+	width: 100%;
+}
+.ace--width-50 {
+	width: 50%;
+}
+
+
+
+.ace--only-desktop {
+	display: none;
+}
+.ace--win-1920 {
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+	height: 100%;
+	max-height: 1080px;
+	margin: 0 auto;
+}
+.ace--win-1920-W {
+	position: relative;
+	width: 100%;
+	max-width: 1920px;
+	height: max-content;
+	margin: 0 auto;
+	padding-bottom: 10px;
+}
+.ace--win {
+	background: white;
+}
+.ace--dis-None {
+	display: none;
+}
+.ace--dis-Block {
+	display: block;
+}
+.ace--dis-Contents {
+	display: contents;
+}
+.ace--dis-Flex {
+	display: flex;
+}
+.ace--dis-Flex-Row {
+	display: flex;
+	flex-direction: row;
+}
+.ace--dis-Flex-Column {
+	display: flex;
+	flex-direction: column
+}
+.ace--dis-FlowRoot {
+	display: flow-root;
+}
+.ace--dis-Grid {
+	display: grid;
+}
+.ace--dis-Inline {
+	display: inline;
+}
+.ace--dis-InlineBlock {
+	display: inline-block;
+}
+.ace--dis-InlineFlex {
+	display: inline-flex;
+}
+.ace--dis-InlineGrid {
+	display: inline-grid;
+}
+.ace--dis-InlineTable {
+	display: inline-table;
+}
+.ace--pos-Absolute {
+	position: absolute;
+}
+.ace--pos-Fixed {
+	position: fixed;
+}
+.ace--pos-Relative {
+	position: relative;
+}
+.ace--pos-Static {
+	position: static;
+}
+.ace--pos-Sticky {
+	position: sticky;
+}
+.ace--CenterHorizontal {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.ace--CenterVertical {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.ace--Center {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+.ace--CenterHorizontalRel {
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+}
+.ace--CenterVerticalRel {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+.ace--CenterRel {
+	position: relative;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+input {
+	width: calc(100% - 43px);
+	padding: 5px 10px 0 30px;
+	height: 35px;
+	background: white;
+    border: 1.3px solid hsla(0,0%,50%,1.00);
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+}
+input:focus, input:focus-visible {
+    border: 1.3px solid hsla(0,0%,80%,1.00);
+	outline: 2px solid hsla(0,0%,80%,1.00);
+}
+input:focus + .label-Dynamic, input:focus + ace--input label, input:focus-visible + .label-Dynamic, input:focus-visible + ace--input label {
+	background: white;
+	top: -10px;
+	left: 25px;
+	padding: 0 10px;
+	border-radius: 100px;
+	transform: translateX(0);
+    font-size: 16px;
+	font-weight: 500;
+}
+.label-Dynamic, ace--input label {
+	width: max-content;
+    font-size: 24px;
+    text-align: center;
+    font-weight: 600;
+	transition-duration: .2s;
+	cursor: text;
+/*    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";*/
+}
+.container-input {
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.ace--Button {
+	flex: 10;
+	width: fit-content;
+	min-width: 200px;
+	padding: 10px 40px;
+	background: hsla(332,0%,100%,0.6);
+	border: 8px solid hsla(332,74%,72%, .3);
+	border-radius: 500px;
+	box-shadow: 0 3px 6px hsla(0,0%,0%,.3);
+	text-align: center;
+	color: hsla(0,0%,50%,1.00);
+	font-size: 20px;
+	font-family: Nunito;
+	font-weight: 700;
+	cursor: pointer;
+	transition: background .3s ease-out, border .3s ease-out;
+}
+.ace--Button:hover {
+	background: hsla(332,74%,95%,.6);
+	border: 8px solid hsla(332,74%,72%,1.00);
+}
+products {
+	display: flex!important;
+	width: 1290px;
+	padding: 10px 30px;
+	margin: auto;
+	scroll-snap-type: x mandatory;
+	scroll-padding-left: 30px;
+	gap: 30px;
+	overflow: auto hidden;
+}
+products::-webkit-scrollbar {
+	display: none;
+}
+product {
+	display: flex;
+	flex-direction: column;
+	flex: 0 0 auto;
+	width: 300px;
+	height: 420px;
+	scroll-snap-align: start;
+	border-radius: 5px;
+	transition: box-shadow .3s ease-out;
+	overflow: hidden;
+}
+product:hover {
+	box-shadow: 0 0 6px hsla(0,0%,70%,1);
+}
+images {
+	display: block;
+	flex: 0 0 auto;
+	width: 300px;
+	height: 300px;
+	background: hsla(0,0%,90%,1.00)
+}
+category {
+	padding: 5px 0 10px 10px;
+	font-size: 14px;
+	font-style: italic;
+}
+name, price {
+	padding: 0 10px;
+	font-size: 16px;
+}
+
+
+
+.treStreak {
+	display: inline-block;
+	position: relative;
+	width: 12px;
+	height: 100px;
+	transform-origin: 50% 100%;
+	background: hsla(0,0%,40%,1.00);
+	box-shadow: 1px 1px 4px hsla(0,0%,0%,.3), 2px 3px 6px hsla(0,0%,100%,.7) inset;
+	border-radius: 100px;
+}
+#treStreak-1 {
+	transform: rotateZ(15deg);
+	left: 0;
+	bottom: 50px;
+}
+#treStreak-2 {
+	transform: rotateZ(45deg);
+	left: 25px;
+	bottom: 37px;
+}
+#treStreak-3 {
+	transform: rotateZ(75deg);
+	left: 25px;
+}
+
+
+
+#bg-SignUp {
+	width: 100%;
+	height: 100%;
+	background: hsla(0,0%,0%,.8);
+	z-index: 110;
+	animation: bg-SignUp .2s ease-out;
+}
+#container-outter-SignUp {
+	max-width: 800px;
+	transform: translate(-50%,-25%);
+	padding: 50px 50px 80px;
+	background: white;
+	border-radius: 30px;
+	box-shadow: 3px 3px 6px hsla(0,0%,0%,1),0px 0px 10px hsla(0,0%,0%,.7);
+	animation: signUpM .3s ease-out;
+}
+#container-SignUp {
+	position: relative;
+	width: 100%;
+	max-width: 800px;
+	height: 100%;
+	max-height: 500px;
+}
+#header-SignUp {
+	font-size: 40px;
+	font-weight: 900;
+	text-align: center;
+}
+#body-SignUp {
+	font-size: 20px;
+	margin-bottom: 50px;
+	text-align: center;
+}
+.container-dual-Input {
+	display: flex;
+	gap: 10px;
+}
+#cSubmit {
+	display: block;
+	width: 200px;
+	font-size: 18px;
+	margin: 55px auto 30px;
+	border: none;
+	color: white;
+	background: linear-gradient(to right, hsla(0,0%,70%,1), hsla(0,0%,50%,1.00));
+}
+#cAcc {
+	width: max-content;
+	margin: auto;
+	text-align: center;
+}
+#fPass {
+	display: block;
+	position: absolute;
+	width: max-content;
+	right: 0;
+	font-size: 14px;
+	color: hsla(0,0%,80%,1.00);
+}
+
+@keyframes bg-SignUp {
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+@keyframes signUp {
+	0%{opacity: 0;transform: translate(-40%,-50%);}
+	50%{opacity: 0;transform: translate(-40%,-50%);}
+	100%{opacity: 1;transform: translate(-50%,-50%);}
+}
+@keyframes signUpM {
+	0%{opacity: 0;transform: translate(-50%,-10%);}
+	50%{opacity: 0;transform: translate(-50%,-10%);}
+	100%{opacity: 1;transform: translate(-50%,-25%);}
+}
+
+
+@media only screen and (min-width: 800px) {
+	::-webkit-scrollbar {
+		width: 10px;
+	}
+
+	input {
+		width: calc(100% - 43px);
+		padding: 10px 10px 0 30px;
+		height: 50px;
+		background: white;
+		border: 1.3px solid hsla(0,0%,50%,1.00);
+		border-radius: 3px;
+		font-size: 22px;
+		font-weight: 500;
+		font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	}
+	.label-Dynamic, ace--input label {
+		font-size: 32px;
+		text-align: center;
+		font-weight: 600;
+		transition-duration: .2s;
+		cursor: text;
+	/*    font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";*/
+	}
+	input:focus + .label-Dynamic, input:focus + ace--input label, input:focus-visible + .label-Dynamic, input:focus-visible + ace--input label {
+		background: transparent;
+		top: 5px;
+		left: 25px;
+		padding: 0 10px;
+		border-radius: 100px;
+		transform: translateX(0);
+		font-size: 16px;
+		font-weight: 500;
+	}
+	.ace--Button {
+		flex: 10;
+		width: fit-content;
+		min-width: 200px;
+		padding: 10px 40px;
+		background: hsla(0,0%,100%,0.6);
+		border: 8px solid hsla(332,74%,72%, .3);
+		border-radius: 500px;
+		box-shadow: 0 3px 6px hsla(0,0%,0%,.2);
+		text-align: center;
+		color: hsla(0,0%,50%,1.00);
+		font-size: 20px;
+		font-family: Nunito;
+		font-weight: 700;
+		cursor: pointer;
+		transition: background .3s ease-out, border .3s ease-out;
+	}
+	#cSubmit {
+		flex: 10;
+		width: fit-content;
+		min-width: 200px;
+		padding: 10px 40px;
+		background: hsla(0,0%,100%,0.6);
+		border: 8px solid hsla(0,0%,50%,.5);
+		border-radius: 500px;
+		box-shadow: 0 3px 6px hsla(0,0%,0%,.2);
+		text-align: center;
+		color: hsla(0,0%,50%,1.00);
+		font-size: 20px;
+		font-family: Nunito;
+		font-weight: 700;
+		cursor: pointer;
+		transition: background .3s ease-out, border .3s ease-out;
+	}
+	#cSubmit {
+		display: block;
+		width: 300px;
+		margin: 25px auto 20px;
+	}
+	#container-outter-SignUp {
+		transform: translate(-50%,-50%);
+		padding: 50px 50px 80px;
+		background: white;
+		border-radius: 30px;
+		box-shadow: 3px 3px 6px hsla(0,0%,0%,1),0px 0px 10px hsla(0,0%,0%,.7);
+		animation: signUp .3s ease-out;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.ace--only-mobile {
+		display: none;
+	}
+	.ace--only-desktop {
+		display: block;
+	}
+	nav {
+		height: 75px;
+		pointer-events: auto!important;
+	}
+	#nav-Container-Link {
+		flex-direction: row;
+	}
+	.nav-Link {
+		padding: 20px;
+	}
+	.nav-Logo {
+		display: none;
+		left: 50px;
+		top: 50%!important;
+	}
+	#nav-Logo-D {
+		display: block;
+		height: 47px;
+	}
+	#container-Hamburger{
+		display: none;
+/*		top: 50%;*/
+	}
+	.navHide {
+		clip-path: none!important;
+/*		clip-path: circle(0% at calc(100% - 45px))!important;*/
+	}
+	
+	
+	prefooter {
+		display: block;
+		width: 100%;
+		height: 70px;
+	}
+	clip {
+		clip-path: polygon(0 0, 100% 0, 100% 50%, 55% 50%, 50% 100%, 45% 50%, 0 50%);
+	}
+	
+	
+	
+	#baaLink {
+		top: 427px;
+	}
+	
+/*
+	.navHide {
+		clip-path: circle(0% at calc(100% - 95px))!important;
+	}
+*/
+	#nav-Inner-Bg {
+		clip-path: circle(140% at calc(100% - 45px));
+	}
+}
+@media only screen and (min-width: 1200px) {
+	products {
+		width: 1080px;
+	}
+	product {
+		width: 250px;
+		height: 370px;
+	}
+	products product images {
+		width: 250px;
+		height: 250px;
+	}
+}
+@media only screen and (min-width: 1800px) {
+	products {
+		width: 1290px;
+	}
+	product {
+		width: 300px;
+		height: 420px;
+	}
+	products product images {
+		width: 300px;
+		height: 300px;
+	}
+}

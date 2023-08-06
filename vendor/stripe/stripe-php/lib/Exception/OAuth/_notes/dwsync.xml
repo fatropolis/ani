@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ExceptionInterface.php" server="C:/xampp/htdocs/Anibere/" local="132931918140000000" remote="132931918140000000" Dst="2" />
+<file name="InvalidClientException.php" server="C:/xampp/htdocs/Anibere/" local="132931918140000000" remote="132931918140000000" Dst="2" />
+<file name="InvalidGrantException.php" server="C:/xampp/htdocs/Anibere/" local="132931918140000000" remote="132931918140000000" Dst="2" />
+<file name="InvalidRequestException.php" server="C:/xampp/htdocs/Anibere/" local="132931918160000000" remote="132931918160000000" Dst="2" />
+<file name="InvalidScopeException.php" server="C:/xampp/htdocs/Anibere/" local="132931918160000000" remote="132931918160000000" Dst="2" />
+<file name="OAuthErrorException.php" server="C:/xampp/htdocs/Anibere/" local="132931918160000000" remote="132931918160000000" Dst="2" />
+<file name="UnknownOAuthErrorException.php" server="C:/xampp/htdocs/Anibere/" local="132931918160000000" remote="132931918160000000" Dst="2" />
+<file name="UnsupportedGrantTypeException.php" server="C:/xampp/htdocs/Anibere/" local="132931918160000000" remote="132931918160000000" Dst="2" />
+<file name="UnsupportedResponseTypeException.php" server="C:/xampp/htdocs/Anibere/" local="132931918160000000" remote="132931918160000000" Dst="2" />
+</dwsync>

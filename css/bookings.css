@@ -1,0 +1,135 @@
+#container-App {
+	width: 80%;
+	height: 80%;
+	gap: 10px;
+}
+#container-Categories, #container-Styles {
+	width: 100%;
+	height: 100%;
+	filter: drop-shadow(2px 2px 4px hsla(0,0%,50%,0.2)) drop-shadow(0px 0px 1px hsla(0,0%,40%,0.2));
+}
+#container-Categories {
+	flex: 2;
+    justify-content: center;
+}
+#container-Styles {
+	height: 95%;
+	margin: auto;
+	flex: 5;
+	overflow: hidden;
+}
+#container-Styles-Inner {
+	width: 100%;
+	height: 100%;
+	padding: 0 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+.category, .style {
+	width: 100%;
+	margin: 10px 0;
+	background: white;
+	clip-path: polygon(0 0, 95% 0, 95% 50%, 95% 100%, 0 100%);
+	transition: clip-path .1s;
+	cursor: pointer;
+}
+.category:hover, #categoryActive, .style:hover, #styleActive {
+	clip-path: polygon(0 0, 95% 0, 100% 50%, 95% 100%, 0 100%);
+}
+.category {
+	height: 10%;
+}
+.category-Content {
+	left: 47%;
+	font-family: 'Nunito Black', Nunito, 'Nunito ExtraBold', 'Nunito Light', 'Nunito SemiBold';
+}
+#container-ScrollShadow {
+	position: absolute;
+	bottom: 0;
+	width: calc(95% + 10px);
+	height: 70px;
+	border-bottom: 1px solid hsla(0,0%,70%,.4);
+	overflow: hidden;
+	pointer-events: none;
+}
+#scrollShadow {
+	top: 100%;
+	width: 70%;
+	height: 200%;
+	padding: 0 30px;
+	box-shadow: 0 0px 40px hsla(0,0%,50%,.2);
+}
+.style {
+	height: 200px;
+	width: calc(100% - 40px);
+	padding-right: 40px;
+}
+#container-Style {
+	width: 100%;
+	height: 100%;
+	border: 1px solid hsla(0,0%,70%,.20);
+	box-shadow: 2px 2px 8px hsla(0,0%,30%,0.2);
+	flex: 4;
+}
+.container-Style-Left {
+    padding: 20px;
+    flex: 2;
+    display: flex;
+}
+.style-Name {
+    flex: auto;
+    font-family: "nunito";
+    font-weight: 900;
+}
+.style-Desc {
+    flex: auto;
+    font-family: "nunito";
+    font-weight: 500;
+}
+.style-Cost {
+    flex: 2;
+    font-family: "nunito";
+    font-weight: 700;
+}
+.style-Time {
+    flex: 1;
+    font-family: "nunito";
+    font-weight: 100;
+    font-size: 14px;
+}
+.container-Style-Right {
+    flex: 1;
+    gap: 5px;
+    width: 40%;
+}
+.style-Image {
+	height: 90%;
+	overflow: hidden;
+}
+.style-Image img {
+	height: 100%;
+}
+#container-Image {
+	width: calc(100% - 30px);
+	height: calc(100% - 30px);
+	overflow: hidden;
+}
+#container-Image img {
+	height: 100%;
+}
+#button-Book {
+	bottom: 30px;
+    width: fit-content;
+    padding: 5px 80px;
+	background: hsla(0,0%,90%,0.6);
+	border: 8px solid hsla(0,0%,50%,0.6);
+    border-radius: 100px;
+    box-shadow: 2px 2px 8px hsla(0,0%,30%,.4);
+	font-size: 21px;
+	font-family: "Nunito Black", Nunito, "Nunito ExtraBold", "Nunito Light", "Nunito SemiBold";
+}
+#button-Book:hover {
+	background: hsla(0,0%,70%,0.6);
+	border-color: hsla(0,0%,30%,0.6);
+	cursor: pointer;
+}

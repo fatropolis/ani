@@ -1,0 +1,298 @@
+#container-App {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.invDay {
+	background: hsla(0,0%,90%,1.00);
+}
+.blnkDay {
+	background: hsla(0,0%,97%,1.00);
+}
+#container-Table, #sideBar {
+	width: calc(100% - 30px);
+	height: calc(100% - 32px);
+	background: white;
+	font-family: 'Bauhaus 93';
+	padding: 15px;
+}
+#cal {
+	flex: 3;
+}
+table {
+	width: 100%;
+	height: 100%;
+	outline: 10px solid hsla(0,100%,80%,1);
+	outline-offset: -2px;
+	border-radius: 5px;
+	border-collapse: collapse;
+	padding: 10px;
+	overflow: hidden;
+}
+.day, .weekdays, #caption {
+	width: calc(100% / 7);
+	padding: 10px;
+	border: 2px solid hsla(0,0%,80%,1);
+	font-size: 21px;
+}
+.nxt {
+	background: linear-gradient(to right,transparent 50%,hsla(0,100%,80%,1) 100%);
+	background-size: 200% 100%;
+	background-position: 1% 100%;
+	transition: background .3s;
+}
+.nxt:hover {
+	background-position: 99% 100%;
+}
+.prev {
+	background: linear-gradient(to left,transparent 50%,hsla(0,100%,80%,1) 100%);
+	background-size: 200% 100%;
+	background-position: 99% 100%;
+	transition: background .3s;
+}
+.prev:hover {
+	background-position: 1% 100%;
+}
+#caption {
+	height: 200px;
+	text-align: center;
+	font-size: 32px;
+}
+#caption:nth-child(2) {
+	font-size: 40px;
+}
+td div {
+	width: 100%;
+	height: 100%;
+}
+td div div {
+	width: fit-content;
+	height: fit-content;
+	padding: 0 10px;
+	border-radius: 50%;
+}
+td .container-Slots {
+	width: 50%;
+	height: calc(90% - 30px);
+	padding: 0;
+}
+td div div .active, td div div .inactive {
+	width: 100%;
+	height: 13%;
+	margin: 5% auto;
+	padding: 0;
+	background: green;
+}
+td div div .inactive {
+	background: red;
+}
+.day {
+	padding: 0;
+}
+.day:not(.calToday):not(.invDay):not(.blnkDay):hover, .nxt, .prev {
+	cursor: pointer;
+}
+.day div {
+	border-radius: 20px;
+	transition: background .3s;
+	transition-delay: .2s;
+	margin: auto;
+}
+.day:not(.calToday):not(.invDay):not(.blnkDay):hover > div {
+	background: hsla(0,100%,97%,1.00);
+	transition-delay: 0s;
+}
+.calToday div div {
+	background: hsla(0,100%,90%,1);
+}
+.weekdays {
+	height: 50px;
+}
+
+#sideBar {
+	position: absolute;
+	opacity: 0;
+	right: -110%;
+	width: calc(100% - 30px);
+	height: calc(100% - 50px);
+	padding-bottom: 32px;
+	border: 2px solid hsla(0,0%,60%,1);
+	border-radius: 15px 0 0 15px;
+	box-shadow: 5px 5px 10px hsla(0,0%,40%,.2), 1px 1px 6px hsla(0,0%,40%,.5);
+	outline: 10px solid hsla(0,100%,80%,1);
+	outline-offset: -20px;
+	transition: opacity .3s, right .31s;
+	z-index: 50;
+}
+.sideBarActive {
+	opacity: 1!important;
+	right: 0%!important;
+}
+#mobile-BgBlur {
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: hsla(0,0%,0%,0.9);
+	opacity: 0;
+	transition: opacity .2s;
+	pointer-events: none;
+	z-index: 40;
+}
+#mobile-ArrBck{
+	position: absolute;
+	left: 30px;
+	top: 50px;
+	font-size: 25px;
+	font-weight: 900;
+	padding: 0 10px;
+}
+.sideBarActive + #mobile-BgBlur {
+	opacity: 1;
+	pointer-events: auto;
+}
+#container-Service {
+	flex: 1;
+}
+#service-Name {
+	flex: 2;
+}
+#text-Service-Name {
+	font-size: 40px;
+	padding: 10px;
+	text-align: center;
+}
+#service-Price {
+	flex: 1;
+}
+#text-Service-Price {
+	font-size: 21px;
+	text-align: center;
+}
+#container-Time {
+	flex: 5;
+}
+#day {
+	flex: 1;
+	padding: 10px 0;
+	border: 2px solid hsla(0,0%,80%,1);
+	color: hsla(0,0%,70%,1);
+	font-size: 35px;
+	text-align: center;
+}
+#container-Slots {
+	flex: 10;
+	gap: 10px;
+	padding: 30px 50px;
+}
+.container-Slot, #book {
+	position: relative;
+	flex: 9;
+	border: 2px solid hsla(0,0%,80%,1);
+	border-radius: 100px;
+	box-shadow: 0 0 0 hsla(0,0%,0%,0);
+	transition: box-shadow .3s;
+	cursor: pointer;
+}
+.container-Slot:not(#book):not(.slot-Invalid):hover, #Slot-Active {
+	box-shadow: 0 0 5px hsla(0,0%,0%,1);
+}
+#slot-Active {
+	box-shadow: 0 0 5px hsla(0,0%,0%,1);
+	background: hsla(120,100%,95%,1.00);
+}
+.slot-Invalid {
+	background: hsla(0,0%,80%,1);
+	cursor: default;
+}
+#book {
+	flex: 10;
+	font-size: 30px;
+	border: 10px solid hsla(0,0%,80%,1);
+	box-shadow: 5px 5px 10px hsla(0,0%,40%,.2), 1px 1px 6px hsla(0,0%,40%,.5);
+	transition: background .3s, border-color .3s;
+}
+#book:hover {
+	background: hsla(0,0%,80%,1);
+	border: 10px solid hsla(0,0%,60%,1);
+}
+.bookReady {
+	border-color: hsla(120,100%,50%,1.00)!important;
+}
+.bookReady:hover {
+	background: hsla(120,100%,95%,1.00)!important;
+}
+#glossary {
+	flex: 1;
+}
+.container-Glossary {
+	flex: 1;
+}
+#glossary-Active, #glossary-Inactive {
+	flex: 1;
+	margin: 5px 20px;
+	border-radius: 10px;
+}
+#glossary-Active {
+	background: green;
+}
+#glossary-Inactive {
+	background: red;
+}
+#text-Glossary-Active, #text-Glossary-Inactive {
+	flex: 5;
+	margin: 5px 0px;
+}
+
+
+
+
+@media only screen and (min-width: 800px) {
+	.day, .weekdays, #caption {
+		padding: 10px;
+	}
+	.day div {
+		margin: revert;
+	}
+	.day {
+		padding: 5px 10px 0 10px;
+	}
+	#sideBar {
+		width: calc(40% - 30px);
+	}
+	#mobile-BgBlur {
+		display: block;
+	}
+	#mobile-ArrBck {
+		display: none;
+	}
+}
+@media only screen and (min-width: 1300px) {
+	#container-App {
+		width: 90%;
+		height: 80%;
+		gap: 30px;
+		padding: 20px;
+	}
+	
+	#container-Table, #sideBar {
+		border: 2px solid hsla(0,0%,60%,1);
+		border-radius: 20px;
+		box-shadow: 5px 5px 10px hsla(0,0%,40%,.2), 1px 1px 6px hsla(0,0%,40%,.5);
+	}
+
+	#sideBar {
+		flex: 1;
+		position: relative;
+		opacity: 1;
+		right: 0%;
+		width: calc(100% - 30px);
+		height: calc(100% - 50px);
+		padding-bottom: 32px;
+		outline: 10px solid hsla(0,100%,80%,1);
+		outline-offset: -20px;
+	}
+	#mobile-BgBlur {
+		display: none;
+	}
+}

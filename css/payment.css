@@ -1,0 +1,86 @@
+ace--input {
+	flex: 1;
+	margin-bottom: 10px;
+}
+input {
+	height: 50px;
+}
+.label-Dynamic {
+	top: 15px;
+	font-size: 24px;
+}
+
+
+#container-Header {
+	width: 100%;
+	height: 200px;
+	border-bottom: 1px solid hsla(0,0%,70%,1.00);
+    background: hsla(0,0%,95%,1.00);
+}
+#container-Body-Inner {
+	width: 90%;
+	max-width: 900px;
+	height: fit-content;
+}
+
+#container-PaymentHeader {
+	text-align: center;
+	padding: 0 0 30px 0;
+}
+#text-Payment {
+	font-size: 67px;
+	font-family: "Bauhaus 93";
+	color: hsla(0,0%,70%,1.00);
+}
+#container-Method {
+	display: none;
+	position: relative;
+	width: 100%;
+	height: 150px;
+	margin-bottom: 40px;
+	font-size: 0;
+	column-gap: 20px;
+}
+
+#container-Info {
+	padding-bottom: 100px;
+}
+.container-Method-Options, .container-Method-Options-Selected {
+	position: relative;
+	height: 100%;
+	border: 2px solid hsla(0,0%,80%,0);
+	border-radius: 10px;
+	flex: 1;
+}
+.container-Method-Options:hover:not(.container-Method-Options-Selected) {
+	border: 2px solid hsla(0,0%,90%,1.00);
+	cursor: pointer;
+}
+.container-Method-Options-Selected {
+	border: 2px solid hsla(0,100%,50%,1.00);
+	box-shadow: 2px 2px 6px;
+}
+.paymentColl {
+	width: calc(100% - 40px);
+	margin: 0px 20px 10px 20px;
+}
+#group-Name, #group-Contact {
+	gap: 10px;
+}
+#group-Contact {
+	border-bottom: 1px solid;
+}
+#container-Info {
+	width: 100%;
+}
+#group-CityZip {
+	column-gap: 10px;
+}
+#submit {
+	bottom: 10px;
+}
+/*
+#input-CardExpiry:not(#input-CardExpiry):focus {
+	color: hsla(0,0%,0%,00);
+}
+*/

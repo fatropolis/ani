@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="ApiConnectionException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="ApiErrorException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="AuthenticationException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="BadMethodCallException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="CardException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="ExceptionInterface.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="IdempotencyException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="InvalidArgumentException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="InvalidRequestException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="PermissionException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="RateLimitException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="SignatureVerificationException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="UnexpectedValueException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="UnknownApiErrorException.php" server="C:/xampp/htdocs/TAB/" local="132784491440000000" remote="132784527440000000" Dst="1" />
+<file name="ApiConnectionException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="ApiErrorException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="AuthenticationException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="BadMethodCallException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="CardException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="ExceptionInterface.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="IdempotencyException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="InvalidArgumentException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="InvalidRequestException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="PermissionException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="RateLimitException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="SignatureVerificationException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="UnexpectedValueException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+<file name="UnknownApiErrorException.php" server="C:/xampp/htdocs/Anibere/" local="132784491440000000" remote="132784491440000000" Dst="2" />
+</dwsync>
